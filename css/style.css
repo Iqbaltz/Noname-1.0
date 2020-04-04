@@ -1,0 +1,16 @@
+.answer {
+	text-transform: uppercase;
+}
+
+.word {
+	margin-top: 50px;
+}
+
+.huruf {
+	margin: 20px;
+	background-color: blueviolet;
+	padding: 10px 20px;
+	color: white;
+	text-transform: uppercase;
+	cursor: pointer;
+}
