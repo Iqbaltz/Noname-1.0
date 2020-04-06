@@ -29,7 +29,7 @@ h1 {
 
 .huruf {
 	margin: 20px;
-	background-color: blueviolet;
+	background-color: rgb(3, 215, 243);
 	padding: 10px 20px;
 	color: white;
 	text-transform: uppercase;
@@ -53,7 +53,7 @@ button:focus {
 	margin: 10px auto;
 	outline: none;
 	border: none;
-	background-color: blueviolet;
+	background-color: rgb(248, 4, 4);
 	color: white;
 }
 
