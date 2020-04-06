@@ -45,7 +45,7 @@ button:focus {
 	outline: none;
 }
 
-.balek {
+.reset {
 	text-transform: uppercase;
 	display: block;
 	border-radius: 20px;
@@ -57,6 +57,6 @@ button:focus {
 	color: white;
 }
 
-.balek:hover {
+.reset:hover {
 	opacity: 0.8;
 }
