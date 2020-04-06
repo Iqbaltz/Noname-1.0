@@ -39,7 +39,10 @@ h1 {
 
 button {
 	cursor: pointer;
-	user-select: none;
+}
+
+button:focus {
+	outline: none;
 }
 
 .balek {
