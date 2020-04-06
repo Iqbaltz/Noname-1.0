@@ -10,10 +10,13 @@ let count = 0;
 let pickedWord = randomWord();
 let guessedWord;
 
+// ini yang bikin tombol reset kalo diklik jalankan fungsi reset dia
 tombolReset.onclick = function() {
 	reset();
 };
 
+// manggil fungsi reset biar jalan kodenya gan
+// kalo kau hapus dia pasti gak jalan
 reset();
 
 function reset() {
