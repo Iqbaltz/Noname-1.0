@@ -52,13 +52,6 @@ h1 {
 
 button {
 	cursor: pointer;
-}
-
-button:focus {
-	outline: none;
-}
-
-.reset {
 	text-transform: uppercase;
 	display: block;
 	border-radius: 20px;
@@ -72,7 +65,11 @@ button:focus {
 	transition: .3s;
 }
 
-.reset:hover {
+button:focus {
+	outline: none;
+}
+
+button:hover {
 	opacity: 0.7;
 	transform: scale(1.1);
 }
