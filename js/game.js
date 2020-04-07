@@ -1,5 +1,5 @@
-// ngimport kata2 yang mau dirandom dari namaHewan.js
-import { randomWord } from './namaHewan.js';
+// ngimport kata2 yang mau dirandom dari namakata.js
+import { randomWord } from './animals.js';
 
 // ngatur variable bosquuh
 var answer = document.getElementById('answer');
