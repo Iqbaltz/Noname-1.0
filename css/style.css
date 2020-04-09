@@ -74,3 +74,19 @@ button:hover {
 	opacity: 0.7;
 	transform: scale(1.1);
 }
+
+.true,
+.false {
+	margin: 2em auto;
+	width: 200px;
+	border-radius: 2px;
+	user-select: none;
+}
+
+.true {
+	background-color: aqua;
+}
+
+.false {
+	background-color: red;
+}

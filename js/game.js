@@ -20,6 +20,11 @@ tombolReset.onclick = function() {
 reset();
 
 function reset() {
+	if (word.classList.value.includes('false')) {
+		word.classList.toggle('false');
+	} else if (word.classList.value.includes('true')) {
+		word.classList.toggle('true');
+	}
 	count = 0;
 	answered = [];
 	pickedWord = randomWord();
@@ -57,13 +62,12 @@ function reset() {
 				// ngecek jawaban benar ato salah, dengan metode includes
 				if (answered.join('').includes(pickedWord)) {
 					playSound('windows');
-					this.style.display = 'block';
-					this.innerHTML = 'Nice kid ! :v';
+					word.classList.toggle('true');
+					word.innerHTML = 'Nice kid ! :v';
 				} else {
 					playSound('oof');
-					this.style.display = 'block';
-					this.style.background = 'red';
-					this.innerHTML = 'Hell No ! :v';
+					word.classList.toggle('false');
+					word.innerHTML = 'Hell No ! :v';
 				}
 			}
 		};
