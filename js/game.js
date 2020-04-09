@@ -52,6 +52,18 @@ function reset() {
 		hurufs[i].onclick = function() {
 			isiJawaban(this.textContent); //nambahkan huruf ke answer
 			this.style.display = 'none'; //ngehapus display huruf
+			// ngecek jawaban dengan cara yang ajaib wkwk
+			if (count == pickedWord.length) {
+				// ngecek jawaban benar ato salah, dengan metode includes
+				if (answered.join('').includes(pickedWord)) {
+					this.style.display = 'block';
+					this.innerHTML = 'Nice kid ! :v';
+				} else {
+					this.style.display = 'block';
+					this.style.background = 'red';
+					this.innerHTML = 'Hell No ! :v';
+				}
+			}
 		};
 	}
 }
