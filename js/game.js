@@ -56,9 +56,11 @@ function reset() {
 			if (count == pickedWord.length) {
 				// ngecek jawaban benar ato salah, dengan metode includes
 				if (answered.join('').includes(pickedWord)) {
+					playSound('windows');
 					this.style.display = 'block';
 					this.innerHTML = 'Nice kid ! :v';
 				} else {
+					playSound('oof');
 					this.style.display = 'block';
 					this.style.background = 'red';
 					this.innerHTML = 'Hell No ! :v';
@@ -75,6 +77,13 @@ function isiJawaban(huruf) {
 	answer.innerHTML = answered.join(' ');
 }
 
+// fungsi untuk jalankan suara
+function playSound(suara) {
+	var audio = new Audio(`sounds/${suara}.mp3`);
+	audio.play();
+}
+
+// fungsi untuk ngacak katanya
 function shuffle(array) {
 	var currentIndex = array.length,
 		temporaryValue,
