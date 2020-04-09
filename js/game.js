@@ -63,11 +63,11 @@ function reset() {
 				if (answered.join('').includes(pickedWord)) {
 					playSound('windows');
 					word.classList.toggle('true');
-					word.innerHTML = 'Nice kid ! :v';
+					word.innerHTML = 'Nice kid ! 🤣';
 				} else {
 					playSound('oof');
 					word.classList.toggle('false');
-					word.innerHTML = 'Hell No ! :v';
+					word.innerHTML = 'Hell No ! 😂';
 				}
 			}
 		};
