@@ -4,7 +4,7 @@ import { randomWord } from './englishWords.js';
 // ngatur variable bosquuh
 var answer = document.getElementById('answer');
 var word = document.getElementById('word');
-var tombolReset = document.getElementById('reset');
+var tombolReset = document.getElementById('btn-reset');
 var answered = [];
 let count = 0;
 let pickedWord = randomWord();
