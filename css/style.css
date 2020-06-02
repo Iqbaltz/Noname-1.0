@@ -85,3 +85,15 @@ button:hover {
 .false {
 	background-color: red;
 }
+
+/* menu page */
+.mainpage{
+	width: 100%;
+	height: 80vh;
+	border: 2px solid rgb(255, 6, 180);
+	border-radius: 5px;
+	margin: 20px auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
