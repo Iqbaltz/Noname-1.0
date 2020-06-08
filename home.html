@@ -17,19 +17,32 @@
             </div>
         </div>
         <button class="btn-reset" id="btn-reset">Reset</button>
-        <button class="btn-mulai" id="btn-mulai">Mulai</button>
-        <button class="btn-keluar" id="btn-keluar">Keluar</button></div>
-        <script src="js/jquery-3.2.1.min.js"></script>
+        <button class="btn-back" id="btn-back">Return</button>
+        <div class="container-1">
+            <div class="isi">
+            <button class="btn-mulai" id="btn-mulai">Start</button>
+            <button class="btn-help" id="btn-help">Help</button>
+            <button class="btn-keluar" id="btn-keluar">Exit</button>
+            </div>
+        </div>    
+    <script src="js/jquery-3.2.1.min.js"></script>
     <script type="module" src="js/game.js"></script>
     <script>
             $('.container').hide();
             $('.btn-reset').hide();
+            $('.btn-back').hide();
             $('.btn-mulai').click(function(){
-			    $('.container').show();
+                $('.container').show();
+                $('.container-1').hide();
                 $('.btn-reset').show();
-                $('.btn-mulai').hide();
-                $('.btn-keluar').hide();
-		        })
+                $('.btn-back').show();
+                $('.btn-back').click(function(){
+                    $('.container').hide();
+                    $('.btn-reset').hide();
+                    $('.btn-back').hide();
+                    $('.container-1').show();
+                });
+		        });
     </script>
 </body>
 </html>
