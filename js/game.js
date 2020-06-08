@@ -6,6 +6,7 @@ var answer = document.getElementById('answer');
 var word = document.getElementById('word');
 var tombolReset = document.getElementById('btn-reset');
 var answered = [];
+var tombolBalek = document.getElementById('btn-back');
 let count = 0;
 let pickedWord = randomWord();
 let guessedWord;
@@ -15,6 +16,9 @@ tombolReset.onclick = function() {
 	reset();
 };
 
+tombolBalek.onclick = function() {
+	reset();
+}
 // manggil fungsi reset biar jalan kodenya gan
 // kalo kau hapus dia pasti gak jalan
 reset();
