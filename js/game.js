@@ -2,14 +2,16 @@
 import { randomWord } from './englishWords.js';
 
 // ngatur variable bosquuh
-var answer = document.getElementById('answer');
-var word = document.getElementById('word');
-var tombolReset = document.getElementById('btn-reset');
-var answered = [];
-var tombolBalek = document.getElementById('btn-back');
+const answer = document.getElementById('answer');
+const word = document.getElementById('word');
+const tombolReset = document.getElementById('btn-reset');
+const tombolBalek = document.getElementById('btn-back');
+const scoreDisplay = document.getElementById('score');
+let answered = [];
 let count = 0;
 let pickedWord = randomWord();
 let guessedWord;
+let score = 0;
 
 // ini yang bikin tombol reset kalo diklik jalankan fungsi reset dia
 tombolReset.onclick = function() {
@@ -18,7 +20,9 @@ tombolReset.onclick = function() {
 
 tombolBalek.onclick = function() {
 	reset();
-}
+	score = 0;
+	scoreDisplay.innerHTML = score;
+};
 // manggil fungsi reset biar jalan kodenya gan
 // kalo kau hapus dia pasti gak jalan
 reset();
@@ -65,17 +69,25 @@ function reset() {
 			if (count == pickedWord.length) {
 				// ngecek jawaban benar ato salah, dengan metode includes
 				if (answered.join('').includes(pickedWord)) {
-					playSound('windows');
-					word.classList.toggle('true');
-					word.innerHTML = 'Nice kid ! 🤣';
+					handleAnswer(true);
 				} else {
-					playSound('oof');
-					word.classList.toggle('false');
-					word.innerHTML = 'Hell No ! 😂';
+					handleAnswer(false);
 				}
 			}
 		};
 	}
+}
+
+function handleAnswer(answer) {
+	playSound(`${answer ? 'windows' : 'oof'}`);
+	answer ? (score += 2) : score--;
+	console.log(score);
+	scoreDisplay.innerHTML = score;
+	word.classList.toggle(`${answer}`);
+	word.innerHTML = `${answer ? 'Good Job ! 😎' : "Oops! that's wrong 😋"}`;
+	setTimeout(() => {
+		reset();
+	}, 2000);
 }
 
 // fungsi untuk ngisi kolom answer/jawaban

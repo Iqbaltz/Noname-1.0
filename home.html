@@ -9,6 +9,10 @@
 </head>
 <body>
         <div class="atlasmain">
+            <div class="scoreBoard">
+                <p>score:</p>
+                <p id="score">0</p>
+            </div>
         <h1 class="mt-4">Test Your Vocabulary</h1>
         <div class="container">
             <div class="board text-center">
@@ -31,7 +35,9 @@
             $('.container').hide();
             $('.btn-reset').hide();
             $('.btn-back').hide();
+            $('.scoreBoard').hide()
             $('.btn-mulai').click(function(){
+                $('.scoreBoard').show()
                 $('.container').show();
                 $('.container-1').hide();
                 $('.btn-reset').show();
@@ -41,6 +47,7 @@
                     $('.btn-reset').hide();
                     $('.btn-back').hide();
                     $('.container-1').show();
+                    $('.scoreBoard').hide();
                 });
 		        });
     </script>
