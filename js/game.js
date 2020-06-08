@@ -5,7 +5,6 @@ import { randomWord } from './englishWords.js';
 const answer = document.getElementById('answer');
 const word = document.getElementById('word');
 const tombolReset = document.getElementById('btn-reset');
-const tombolBalek = document.getElementById('btn-back');
 const scoreDisplay = document.getElementById('score');
 let answered = [];
 let count = 0;
@@ -13,16 +12,33 @@ let pickedWord = randomWord();
 let guessedWord;
 let score = 0;
 
+$('.container').hide();
+$('.btn-reset').hide();
+$('.btn-back').hide();
+$('.scoreBoard').hide();
+$('.btn-mulai').click(function() {
+	reset();
+	score = 0;
+	scoreDisplay.innerHTML = score;
+	$('.scoreBoard').show();
+	$('.container').show();
+	$('.container-1').hide();
+	$('.btn-reset').show();
+	$('.btn-back').show();
+	$('.btn-back').click(function() {
+		$('.container').hide();
+		$('.btn-reset').hide();
+		$('.btn-back').hide();
+		$('.container-1').show();
+		$('.scoreBoard').hide();
+	});
+});
+
 // ini yang bikin tombol reset kalo diklik jalankan fungsi reset dia
 tombolReset.onclick = function() {
 	reset();
 };
 
-tombolBalek.onclick = function() {
-	reset();
-	score = 0;
-	scoreDisplay.innerHTML = score;
-};
 // manggil fungsi reset biar jalan kodenya gan
 // kalo kau hapus dia pasti gak jalan
 reset();
